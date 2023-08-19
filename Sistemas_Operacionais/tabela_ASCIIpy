@@ -1,0 +1,13 @@
+'''
+Matheus da Silva - 19/08/2023
+'''
+print('\nImprimindo a tabela ASCII\n')
+cod = ''
+while cod == '':
+    cod = input('Digite um numero ou uma letra para sair: ')
+    if not cod.isdigit():
+        break
+    else:
+        converte_cod = int(cod)
+        print(chr(converte_cod))
+        cod = ''
