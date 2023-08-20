@@ -18,7 +18,7 @@ def tabela():
         else:
             converte_cod = int(cod)
             valor = chr(converte_cod)
-            lb_resultado['text'] = ' O codigo ' + str(cod) + ' na Tabela ASCII recebe este simbolo: ' + str(valor)
+            lb_resultado['text'] = ' O codigo ' + str(cod) + ' na Tabela ASCII recebe o simbolo: ' + str(valor)
             print(f'O codigo "{cod}" é de simbolo na Tabela é: ', f'{valor}')
             cod = 'x'
             lb_erro['text'] = ''
