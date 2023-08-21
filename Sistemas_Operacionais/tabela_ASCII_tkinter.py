@@ -13,7 +13,7 @@ def tabela():
         cod = entry.get()
         if not cod.isdigit():
             lb_erro['text'] = 'Digite somente numero!'
-            print('\nVoce saiu do programa!\n')
+            print('\nDigite somente numero!\n')
             break
         else:
             converte_cod = int(cod)
