@@ -70,8 +70,8 @@ void main() {
     do{
         printf("Deseja uma opção desejada?\n");
         printf("1  - Agendar\n");
-        printf("1  - Listar\n");
-        printf("1  - Sair\n");
+        printf("2  - Listar\n");
+        printf("3  - Sair\n");
         fflush(stdin);
         scanf("%d", &opcao);
 
@@ -87,7 +87,7 @@ void main() {
 
             }
             default :{
-                printf("Opção invalida\n");
+                printf("Opcao invalida\n");
             }
         }
     }while (opcao != 3);
