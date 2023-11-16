@@ -50,6 +50,16 @@ void agendarConsulta(){
     }
 }
 
+void listarConsulta(){
+    int i;
+    for(i = 0; i < qtdAgendamento; i++){
+        printf("=============================\n");
+        printf("Nome: %s\n, agenda[i].nome");
+        printf("Dia: %d\n, agenda[i].dia");
+        printf("Hora: %d\n, agenda[i].hora");
+    }
+}
+
 void main() {
 
     setlocale(LC_ALL, "");
