@@ -19,6 +19,9 @@ bool verificarDisponibilidade(int diaAgenda, int horaAgenda){
         if(horaAgenda < 8){
             printf("Clinica fechada neste horario\n");
             return false;
+        }else if(horaAgenda > 20){
+            printf("Clinica fechada neste horario\n");
+            return false;
         }
         return true;
 }
@@ -78,13 +81,15 @@ void main() {
         switch(opcao){
             case 1:{
                 agendarConsulta();
+                break;
 
             }case 2:{
                 listarConsulta();
+                break;
 
             }case 3:{
                 printf("Saindo do programa...\n");
-
+                break;
             }
             default :{
                 printf("Opcao invalida\n");
