@@ -1,8 +1,11 @@
-#include <stdio.h>
-int main(){
-            int i, N = 3, res;
-            for(i = 1; i <= 10; i++){
-                        res = N * i;
-                        printf("%d x %d = %d\n", i, N, res);
-            }
+int main() {
+            int xi = 0;
+            int *ptr_xi = ξ;
+           
+            char xc = 'A';
+            char *ptr_xc = &xc;
+           
+            ptr_xi = (int *) ptr_xc;
+ 
+            return(0);
 }

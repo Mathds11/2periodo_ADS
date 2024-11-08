@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Matheus da Silva">
+    <title>Tabelas</title>
+    <link rel="stylesheet" href="tabelas.css">
+</head>
+<body>
+    <table>
+        <caption>Tabela</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Homens</th>
+                <th>Mulheres</th>
+                <th>Crianças</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Carne bovina</td>
+                <td>500g</td>
+                <td>300g</td>
+                <td>200g</td>
+            </tr>
+            <tr>
+                <td>Frango</td>
+                <td>200g</td>
+                <td>200g</td>
+                <td>100g</td>
+            </tr>
+            <tr>
+                <td>Linguiça</td>
+                <td>200g</td>
+                <td>200g</td>
+                <td>200g</td>
+            </tr>
+            <tr>
+                <td>Refrigerante</td>
+                <td>300ml</td>
+                <td>400ml</td>
+                <td>200g</td>
+            </tr>
+            <tr>
+                <td>Cerveja</td>
+                <td>800ml</td>
+                <td>500ml</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="princ">
+        <div id="exercicio">
+            <h1>Mapa</h1>
+            <h2>Calculadora de churrasco</h2>
+        </div>
+        <div id="corpo">
+        <form method="dialog" id="form">
+            <fieldset>
+                <legend>Resposta</legend><br>
+                <label for="h">Homens: </label>
+                <input type="number" id="m"><br>
+                <br>
+                <label for="h">Mulheres: </label>
+                <input type="number" id="f"><br>
+                <br>
+                <label for="h">Crianças: </label>
+                <input type="number" id="c"><br>
+                <br>
+                
+                <div class="botao">
+                    <button id="calcular" onclick="btCalculo()">Calcular</button>
+                    <button id="limpar" onclick="btResetar()">Limpar</button>
+                </div><br>
+                <span id="carne">Quantidade de Carne bovina:</span><br>
+                <span id="frango">Quantidade de Frango:</span><br>
+                <span id="linguica">Quantidade de Linguiça:</span><br>
+                <span id="refri">Quantidade de Refrigerante:</span><br>
+                <span id="cerveja">Quantidade de Cerveja:</span>
+            </fieldset>
+        </form>
+        </div>
+    </div>
+    <script>
+        let form = document.getElementById('form')
+        let homem = document.getElementById('m');
+        let mulher = document.getElementById('f');
+        let crianca = document.getElementById('c');
+        let carne = document.getElementById('carne');
+        let frango = document.getElementById('frango');
+        let linguica = document.getElementById('linguica');
+        let refri = document.getElementById('refri');
+        let cerveja = document.getElementById('cerveja');
+
+        function btCalculo(){
+            carne.value = (homem.value * 500) + (mulher.value * 300) + (crianca.value * 200);
+            frango.value = (homem.value * 200) + (mulher.value * 200) + (crianca.value * 100);
+            linguica.value = (homem.value * 200) + (mulher.value * 200) + (crianca.value * 200);
+            refri.value = (homem.value * 300) + (mulher.value * 400) + (crianca.value * 200);
+            cerveja.value = (homem.value * 800) + (mulher.value * 500);
+            
+            carne.innerHTML = 'Quantidade de Carne bovina: ' + carne.value.toFixed(2) + ' Kg';
+            frango.innerHTML = 'Quantidade de Frango: ' + frango.value.toFixed(2) + ' Kg';
+            linguica.innerHTML = 'Quantidade de Linguiça: ' + linguica.value.toFixed(2) + ' Kg';
+            refri.innerHTML = 'Quantidade de Refrigerante: ' + refri.value.toFixed(2) + ' Ml';
+            cerveja.innerHTML = 'Quantidade de Cerveja: ' + cerveja.value.toFixed(2) + ' Ml';
+        }
+
+        function btResetar(){
+            form.reset();
+            carne.innerHTML = 'Quantidade de Carne bovina: ';
+            frango.innerHTML = 'Quantidade de Frango: ';
+            linguica.innerHTML = 'Quantidade de Linguiça: ';
+            refri.innerHTML = 'Quantidade de Refrigerante: '
+            cerveja.innerHTML = 'Quantidade de Cerveja: ';
+        }
+</script>
+</body>
+</html>
